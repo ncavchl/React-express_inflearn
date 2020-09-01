@@ -173,7 +173,7 @@ class App extends React.Component {
 App.propTypes = {
     value:React.PropTypes.string,
     secondValue:React.PropType.number,
-    thirdValue:React.PropTypes.any.isRequired
+    thirdValue:React.PropTypes.any.isRequired /*어떤 타입이던 필수 입력*/
 };
 ```
 
