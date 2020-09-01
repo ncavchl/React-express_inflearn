@@ -40,6 +40,8 @@ ReactJS
     }
 ```
 
+
+
 >2.JavaScript Expression
 - JSX안에서 JavaScript를 표현하는 방법 - { } 로 wrapping
 - let : 블록 유효 범위를 갖는 지역 변수 선언 구문, 임의로 값을 초기화 가능, 한번 선언후 재선언 불가
@@ -58,4 +60,28 @@ ReactJS
        return (
         <p> {1==1 ? 'True' : 'False'} </p>
        );
+    }
+```
+3.Inline Style
+- JSX안에서 Style 설정시 string 형식을 사용하지 않고 key가 CamelCase인 객체 사용
+``` react.js
+    render() { 
+      let style = {
+        color:'aqua',
+        backgroundColor:'black'
+      };
+      
+      return ( 
+        <div style={styls}>React CodeLab</div>
+      ); 
+    }
+ ```
+ 
+ 
+ - JSX안에서 class 설정 시 class = 가 아닌 className = 을 사용
+``` react.js
+    render() { 
+      return ( 
+        <div className="box">React CodeLab</div>
+      ); 
     }
