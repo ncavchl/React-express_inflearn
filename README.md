@@ -26,6 +26,8 @@ ReactJS
 - react <b>JSX</b> - xml 같은 문법을 native javascript로 변환시켜줌
 
 --------
+### JSX
+>1.Nested Element
 - 컴포넌트에서 여러 Element를 렌더링 할 때 꼭 container element 안에 포함시켜야 함
 
 ``` react.js
@@ -37,5 +39,23 @@ ReactJS
       ) 
     }
 ```
- 
 
+>2.JavaScript Expression
+- JSX안에서 JavaScript를 표현하는 방법 - { } 로 wrapping
+- let : 블록 유효 범위를 갖는 지역 변수 선언 구문, 임의로 값을 초기화 가능, 한번 선언후 재선언 불가
+``` react.js
+    render() {
+        let text = "Hello React!";
+        return (
+            <div>{text}</div>
+        );
+    }
+```
+- if else 문은 JSX에서 사용불가 - 이에 대한 대안은 tenary expression 
+> condition ? true : false
+``` react.js
+    render() {
+       return (
+        <p> {1==1 ? 'True' : 'False'} </p>
+       );
+    }
