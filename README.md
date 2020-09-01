@@ -17,10 +17,25 @@ ReactJS
 단점
 - VIEW ONLY (데이터 모델링, 라우팅, AJAX 등등 X) -> 다른 라이브러리를 추가하여 구현
 - IE8 이하 지원 X
-
+<br>
 <b>개발환경 설정</b>
 
 - babel (javascript preprocessor) - ES6를 ES5 이전 버전으로 변환
 - react 컴파일 담당
 - react-dom - 렌더링 담당
 - react <b>JSX</b> - xml 같은 문법을 native javascript로 변환시켜줌
+
+--------
+- 컴포넌트에서 여러 Element를 렌더링 할 때 꼭 container element 안에 포함시켜야 함
+
+``` react.js
+    render() { 
+      return ( 
+        <div>
+          <h1>Hi<hi>
+        </div>
+      ) 
+    }
+```
+ 
+
