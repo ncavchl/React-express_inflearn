@@ -85,3 +85,21 @@ ReactJS
         <div className="box">React CodeLab</div>
       ); 
     }
+```
+
+
+4.Comments
+- JSX안에서 주석 작성시 { /* ... */ } 
+- Nested Element 부분에 설명했던 것과 같이 container element 안에 주석이 작성되어야 함
+``` react.js
+    render() { 
+      return ( 
+        <div>
+            { /*This is How You Comment*/}
+            { /*Multi-line
+                Testing*/}
+            React CodeLab
+        </div>
+      ); 
+    }
+```
