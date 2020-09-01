@@ -62,7 +62,7 @@ ReactJS
        );
     }
 ```
-3.Inline Style
+>3.Inline Style
 - JSX안에서 Style 설정시 string 형식을 사용하지 않고 key가 CamelCase인 객체 사용
 ``` react.js
     render() { 
@@ -88,7 +88,7 @@ ReactJS
 ```
 
 
-4.Comments
+>4.Comments
 - JSX안에서 주석 작성시 { /* ... */ } 
 - Nested Element 부분에 설명했던 것과 같이 container element 안에 주석이 작성되어야 함
 ``` react.js
@@ -103,3 +103,77 @@ ReactJS
       ); 
     }
 ```
+
+
+
+--------
+### props
+- 컴포넌트 내부의 Immutable Data
+- JSX 내부에 { this.props.propsName }
+- 컴포넌트를 사용할 때 , <> 괄호 안에 propsName = "value"
+- <i>this.props.children</i> 은 기본적으로 갖고 있는 props로서, <Cpnt> 여기에 있는 값이 들어간다. </Cpnt>
+
+``` react.js
+class Codelab extends React.Component {
+  render(){
+     return (
+      <div> /*~~*/
+         <h1>Hello {this.props.name}</h1>
+         <div>{this.props.children}</div>
+      </div>
+     );
+  }
+}
+
+class App extends React.Component {
+  render() {
+    return (
+      <Codelab name={this.props.name}>{this.props.children} </Codelab>  
+    );
+  }
+}
+
+ReactDOM.render(<App name="velopert">여기 있는 내용</App>, document.getElementById('root'));
+```
+
+>기본 값 설정 - class 선언후  
+Component.defaultProps = { ... }
+
+``` react.js
+class App extends React.Component {
+    render() {
+        return (
+            <div> {this.props.value} </div>
+        );
+    }
+};
+
+App.defaultProps = {
+    value:0
+};
+```
+
+
+>Type 검증
+Component.propTypes = { ... }
+
+``` react.js
+class App extends React.Component {
+    render() {
+        return (
+            <div> 
+                {this.props.value} 
+                {this.props.secondValue}
+                {this.props.thirdValue}
+            </div>
+        );
+    }
+};
+
+App.propTypes = {
+    value:React.PropTypes.string,
+    secondValue:React.PropType.number,
+    thirdValue:React.PropTypes.any.isRequired
+};
+```
+
