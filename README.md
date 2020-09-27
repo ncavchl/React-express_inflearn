@@ -228,24 +228,7 @@ ReactDOM.render(<App number={5}>여기 있는 내용</App>, document.getElementB
 ``` react.js
 class Codelab extends React.Component {
   render(){
-     return (
-      <div> /*~~*/
-         <h1>Hello {this.props.name}</h1>
-         <div>{this.props.children}</div>
-      </div>
-     );
-  }
-}
 
-class App extends React.Component {
-  render() {
-    return (
-      <Codelab name={this.props.name}>{this.props.children} </Codelab>  
-    );
-  }
-}
-
-ReactDOM.render(<App name="velopert">여기 있는 내용</App>, document.getElementById('root'));
 ```
 
 >기본 값 설정 - class 선언후  
