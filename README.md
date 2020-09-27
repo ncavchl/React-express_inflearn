@@ -215,3 +215,38 @@ ReactDOM.render(<App number={5}>여기 있는 내용</App>, document.getElementB
 
 
 ```
+
+
+
+--------
+### state
+- 유동적인 데이터
+- jsx내부에 {this.state.stateName}
+- 초기값 설정이 필수, 생성자 (constructor) 에서 this.state = {} 으로 설정 
+- 값을 수정할 때에는 this.setState({..}), 렌더링 된 다음엔 this.state = 절대 사용하지 말 것
+
+``` react.js
+class Codelab extends React.Component {
+  render(){
+     return (
+      <div> /*~~*/
+         <h1>Hello {this.props.name}</h1>
+         <div>{this.props.children}</div>
+      </div>
+     );
+  }
+}
+
+class App extends React.Component {
+  render() {
+    return (
+      <Codelab name={this.props.name}>{this.props.children} </Codelab>  
+    );
+  }
+}
+
+ReactDOM.render(<App name="velopert">여기 있는 내용</App>, document.getElementById('root'));
+```
+
+>기본 값 설정 - class 선언후  
+Component.defaultProps = { ... }
