@@ -17,20 +17,24 @@ module.exports = {
     },
 
     module: {
-        loaders: [
-            {
-                test: /\.js$/,
-                loader: 'babel',
-                exclude: /node_modules/,
-                query: {
-                    cacheDirectory: true,
-                    presets: ['es2015', 'react']
-                }
-            }
+        rules: [
+          {
+              test: /\.js$/,
+              loader: 'babel-loader',
+              exclude: /node_modules/,
+          }
+            // {
+            //   test: /\.js$/,
+            //   loader: 'babel-loader',
+            //   exclude: /node_modules/,
+            //   query: {
+            //       cacheDirectory: true,
+            //       presets: ['@babel/preset-env', '@babel/preset-react']
+            // }
+          // }
         ]
     },
 
-//자동으로 reload 
     plugins: [
         new webpack.HotModuleReplacementPlugin()
     ]
