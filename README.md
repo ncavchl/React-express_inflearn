@@ -232,8 +232,35 @@ ReactDOM.render(<App number={5}>여기 있는 내용</App>, document.getElementB
 - 값을 수정할 때에는 this.setState({..}), 렌더링 된 다음엔 this.state = 절대 사용하지 말 것
 
 ``` react.js
-class Codelab extends React.Component {
-  render(){
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state={
+      value:0
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  
+  handleClick() {
+    this.setState({
+      value:this.state.value + 1
+    });
+  }
+  
+  render() {
+    return (
+      <div>
+        <h2>{this.state.value}</h2>
+        <button onClick={this.handleClick}>Press me</button>
+        </div>
+    );
+  }
+};
+
+ReactDOM.render(
+  <App></App>,
+  document.getElementById("root")
+);
 
 ```
 
