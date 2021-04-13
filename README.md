@@ -344,6 +344,7 @@ sudo npm install -g webpack webpack-dev-server
     module: {
         rules: [
           {
+            //query 대신 options
 ```
 
 
