@@ -264,5 +264,15 @@ ReactDOM.render(
 
 ```
 
->기본 값 설정 - class 선언후  
-Component.defaultProps = { ... }
+
+--------
+### Component Mapping
+- 비슷한 코드를 반복해서 렌더링 
+- 
+
+``` react.js
+class Codelab extends React.Component {
+
+  }
+  
+```
