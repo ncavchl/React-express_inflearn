@@ -1,5 +1,6 @@
 # React-express_inflearn
-인프런 - "React &amp; Express 를 이용한 웹 어플리케이션 개발하기"
+(1) 인프런 - "React &amp; Express 를 이용한 웹 어플리케이션 개발하기"  - 버전 문제로 중단 (2018 강의)<br/>
+(2) 노마드 코더 - "ReactJS로 영화 웹 서비스 만들기" https://nomadcoders.co/react-fundamentals/lectures/1540
 
 ### Setting : Git, NPM/Node, MongoDB, 
 
