@@ -273,8 +273,55 @@ ReactDOM.render(
 - map() 메소드는 파라미터로 전달된 함수를 통하여 배열 내의 각 요소를 처리해서 그 결과로 새로운 배열을 생성함.
 
 ``` react.js
-class Codelab extends React.Component {
-
+class Contactinfo extends React.Component {
+  render() {
+    return (
+      <div>
+        {this.props.contact.name}
+        {this.props.contact.phone}
+      </div>
+    )
   }
+};
+class Contact extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      contactData:[
+        {name:'abet', phone:'010-1234-1234'},
+        {name:'bbbb', phone:'011-1234-1234'},
+        {name:'cccc', phone:'012-1234-1234'},
+        {name:'dddd', phone:'013-1234-1234'}
+      ]
+    }
+  }
+  
+  render() {
+    const mapToComponent = (data) => {
+        return data.map((contact,i) => {
+          return (<Contactinfo contact={contact} key={i}/>);
+        });
+    };
+    
+    return(
+      <div>
+        {mapToComponent(this.state.contactData)}
+      </div>
+    )
+  }
+};
+
+class App extends React.Component {
+  render() {
+    return (
+      <Contact/>
+    );
+  }
+};
+
+ReactDOM.render(
+  <App></App>,
+  document.getElementById("root")
+);
   
 ```
