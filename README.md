@@ -267,8 +267,10 @@ ReactDOM.render(
 
 --------
 ### Component Mapping
+>1. Map()
 - 비슷한 코드를 반복해서 렌더링 
-- 
+- 데이터 배열을 리엑트에선 JS 내장함수인 Map 을 사용 
+- map() 메소드는 파라미터로 전달된 함수를 통하여 배열 내의 각 요소를 처리해서 그 결과로 새로운 배열을 생성함.
 
 ``` react.js
 class Codelab extends React.Component {
