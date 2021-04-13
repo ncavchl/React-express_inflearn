@@ -336,3 +336,25 @@ ReactDOM.render(
 sudo npm install -g webpack webpack-dev-server
 
 ```
+
+
+- webpack, webpack-cli error 
+- webpack version 4부터 loader 대신 rules 로 사용 
+``` javascript
+    module: {
+        rules: [
+          {
+```
+
+
+- npm run dev-server 실행이후 babel 관련 에러시  bable-core, babel-loader 버전 확인
+``` cli
+ERROR in ./src/index.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Cannot find module '@babel/core'
+```
+``` javascript
+    "@babel/core": "^7.13.15",
+    "babel-loader": "^8.2.2",
+    // loader가 8이면 core 는 7로
+``` 
