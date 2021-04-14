@@ -122,6 +122,18 @@ ReactJS
 - JSX 내부에 { this.props.propsName }
 - 컴포넌트를 사용할 때 , <> 괄호 안에 propsName = "value"
 - <i>this.props.children</i> 은 기본적으로 갖고 있는 props로서, <Cpnt> 여기에 있는 값이 들어간다. </Cpnt>
+- 프로퍼티의 속성을 es6 문법을 사용하여 단순하게 표기할 수 도 있다.
+``` react.js
+function Food({fav}) {
+  return <h1>I like {fav}</h1>;
+}
+
+
+function Food(props.fav) {
+  return <h1>I like {props.fav}</h1>;
+}
+``` 
+
 
 ``` react.js
 class Codelab extends React.Component {
