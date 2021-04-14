@@ -32,7 +32,8 @@ ReactJS
 - '…' 은 자바스크립트의 전개연산자 입니다. 기존의 객체안에 있는 내용을 해당 위치에다가 풀어준다는 의미죠. 그 다음에, 우리가 설정하고 싶은 값을 또 넣어주면 해당 값을 덮어쓰게 됩니다.
 - es6의 arrow function 문법
 - components - html을 반환하는 함수 
-
+- jsx = javascript + html
+- react는 하나의 component만 렌더링 할 수 있다. (버전별 확인 필요)
 
 --------
 ### JSX
