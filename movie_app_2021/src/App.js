@@ -1,18 +1,41 @@
 import React from 'react';
 
-function Food({fav}) {
-  return <h1>I like {fav}</h1>;
+function Food({key, name, picture}) {
+  return (
+  <div>
+    <h1>I like {name} + {key}</h1>
+    <img src={picture}/>
+  </div>);
+  
 }
+const foodILike = [
+  {
+    key:'1',
+    name: "Orange",
+    image:
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.allfreschgroup.com%2Fwp-content%2Fuploads%2F2017%2F01%2FValencia-Orange.png&f=1&nofb=1",
+  },
+  {
+    key:'2',
+    name: "1222",
+    image:
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.allfreschgroup.com%2Fwp-content%2Fuploads%2F2017%2F01%2FValencia-Orange.png&f=1&nofb=1",
+  },
+  {
+    key:'3',
+    name: "3333",
+    image:
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.allfreschgroup.com%2Fwp-content%2Fuploads%2F2017%2F01%2FValencia-Orange.png&f=1&nofb=1",
+  },
+
+];
 
 function App() {
   return (
     <div>
-      <h1>main</h1>
-
-      <Food fav="kimchi" />
-      <Food fav="aaabb" />
-      <Food fav="smsm" />
-      <Food fav="long" />
+  {foodILike.map( (dish, index) => (
+    <Food key={index} name={dish.name} picture={dish.image}/>
+    ))}
     </div>
 
   );
