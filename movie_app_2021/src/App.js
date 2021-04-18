@@ -41,6 +41,7 @@ Food.propTypes = {
   name: PropTypes.string.isRequired,
   picture: PropTypes.string.isRequired,
   rating: PropTypes.number.isRequired
+  // rating: PropTypes.number 인 경우 꼭 없어도 됨
 };
 
 function App() {
