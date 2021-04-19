@@ -377,7 +377,7 @@ Error: Cannot find module '@babel/core'
 
 --------
 ### 노마드코더 - movielist app
-- async - await 비동기
+- async - await 비동기처리 ES7 문법
 ``` react.js
 getMovies = async () => {
     const movies = await xios.get("https://yts-proxy.now.sh/list_movies.json");
