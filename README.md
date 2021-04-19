@@ -374,3 +374,16 @@ Error: Cannot find module '@babel/core'
     "babel-loader": "^8.2.2",
     // loader가 8이면 core 는 7로
 ``` 
+
+--------
+### 노마드코더 - movielist app
+- async - await 비동기
+``` react.js
+getMovies = async () => {
+    const movies = await xios.get("https://yts-proxy.now.sh/list_movies.json");
+  };
+  asyccomponentDidMount(){
+    this.getMovies();
+  }
+``` 
+
