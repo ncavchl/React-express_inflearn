@@ -5,7 +5,7 @@ class App extends React.Component{
   state = {
     isLoading: true,
     movies: []
-  };
+  };//
   componentDidMount(){
     setTimeout(()=>{
       this.setState({isLoading:false});
