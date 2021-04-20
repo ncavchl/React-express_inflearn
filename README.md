@@ -33,7 +33,7 @@ ReactJS
 - es6의 arrow function 문법
 - components - html을 반환하는 함수 
 - jsx = javascript + html
-- react는 하나의 component만 렌더링 할 수 있다. (버전별 확인 필요)
+- react는 하나의 component만 렌더링 할 수 있다. (버전별 확인 필요) / + styling
 
 --------
 ### JSX
