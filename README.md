@@ -388,3 +388,7 @@ getMovies = async () => {
 ``` 
 
 <img width="1402" alt="스크린샷 2021-04-20 오후 10 14 01" src="https://user-images.githubusercontent.com/48319693/115401797-bfc85900-a225-11eb-9aae-e663946406c9.png">
+
+``` cli
+npm start
+``` 
