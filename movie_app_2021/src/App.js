@@ -31,16 +31,18 @@ class App extends React.Component {
           </div>
         ) : (
           <div className="movies">
-            {movies.map( (movie, index) => (
-            <Movie key={index}
+            {movies.map( (movie, index) => {
+              console.log(movie);
+              return <Movie key={index}
               // id={movie.id} 
-              yaer={movie.year} 
+              year={movie.year} 
               title={movie.title} 
               summary={movie.summary} 
               poster={movie.medium_cover_image} 
               genres={movie.genres}
             />
-            ))}
+            }
+            )}
           </div>
         )}
       </section>
