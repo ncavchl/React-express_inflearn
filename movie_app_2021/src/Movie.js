@@ -14,7 +14,7 @@ function Movie({id, year, title, summary, poster}) {
 
 Movie.propTypes = {
     id : Proptypes.number.isRequired,
-    // year: Proptypes.number.isRequired,
+    year: Proptypes.number.isRequired,
     title : Proptypes.string.isRequired,
     summary : Proptypes.string.isRequired,
     poster : Proptypes.string.isRequired,
