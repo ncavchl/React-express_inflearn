@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from "axios";
 import Movie from "./Movie";
+import "./App.css";
 // import PropTypes from 'prop-types'; 
 
 class App extends React.Component {
@@ -30,13 +31,14 @@ class App extends React.Component {
           </div>
         ) : (
           <div className="movies">
-            {movies.map(movie => (
-            <Movie 
-              id={movie.id} 
+            {movies.map( (movie, index) => (
+            <Movie key={index}
+              // id={movie.id} 
               yaer={movie.year} 
               title={movie.title} 
               summary={movie.summary} 
               poster={movie.medium_cover_image} 
+              genres={movie.genres}
             />
             ))}
           </div>
