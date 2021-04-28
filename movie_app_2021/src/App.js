@@ -3,7 +3,7 @@ import axios from "axios";
 import Movie from "./Movie";
 import "./App.css";
 // import PropTypes from 'prop-types'; 
-
+//
 class App extends React.Component {
   state = {
     isLoading: true,
