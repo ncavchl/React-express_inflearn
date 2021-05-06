@@ -34,6 +34,7 @@ ReactJS
 - components - html을 반환하는 함수 
 - jsx = javascript + html
 - react는 하나의 component만 렌더링 할 수 있다. (버전별 확인 필요) / + styling
+- 배포 문제로 210506 잠시 홀딩
 
 --------
 ### JSX
