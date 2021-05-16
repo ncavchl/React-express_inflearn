@@ -393,3 +393,10 @@ getMovies = async () => {
 ``` cli
 npm start
 ``` 
+
+- navigation 역할
+ ``` cli
+npm install react-router-dom
+``` 
+
+
