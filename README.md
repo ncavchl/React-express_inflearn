@@ -430,3 +430,5 @@ function Navigation(){
 export default Navigation;
 ```
 
+- HashRouter, BrowserRouter 차이
+- https://worker-k.tistory.com/entry/React-BrowserRouter%EC%99%80-HashRouter%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90-%EC%A0%95%EB%A6%AC
