@@ -432,3 +432,29 @@ export default Navigation;
 
 - HashRouter, BrowserRouter 차이
 - https://worker-k.tistory.com/entry/React-BrowserRouter%EC%99%80-HashRouter%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90-%EC%A0%95%EB%A6%AC
+
+
+
+- 무비 디테일 페이지 id로 라우팅
+``` react.js
+class Detail extends React.Component{
+    componentDidMount(){
+        //핸들링 - 데이터 없을시 홈으로
+        const {location, history} = this.props;
+        if(location.state === undefined){
+            history.push("/");
+        }
+    }
+    render(){
+        const {location} = this.props;
+        console.log(location);
+        // console.log(location.state.title, 'id', location.state.id);
+        if (location.state) {
+            return <span>{location.state.title}</span>;
+        }
+        else {
+            return null;
+        }
+    }
+}
+``` 
