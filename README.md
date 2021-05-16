@@ -415,4 +415,18 @@ function App(){
 }
 ```
 
+- navigation 링크는 라우터 안에 있어야 함
+``` react.js
+import React from 'react';
+import { Link }  from "react-router-dom";
+
+function Navigation(){
+    return <div>
+        <Link to="/">home</Link>
+        <Link to="/about">about</Link>
+    </div>;
+}
+
+export default Navigation;
+```
 
