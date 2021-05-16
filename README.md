@@ -400,3 +400,10 @@ npm install react-router-dom
 ``` 
 
 
+componentDidMount()는 컴포넌트가 마운트된 직후, 즉 트리에 삽입된 직후에 호출됩니다. DOM 노드가 있어야 하는 초기화 작업은 이 메서드에서 이루어지면 됩니다. 외부에서 데이터를 불러와야 한다면, 네트워크 요청을 보내기 적절한 위치입니다.
+``` react.js
+componentDidMount()
+```
+
+
+
