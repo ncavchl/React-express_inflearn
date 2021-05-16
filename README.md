@@ -405,5 +405,14 @@ componentDidMount()는 컴포넌트가 마운트된 직후, 즉 트리에 삽입
 componentDidMount()
 ```
 
+- exact={true} 해당 path 주소와 동일할 때만 라우팅
+``` react.js
+function App(){
+  return <HashRouter>
+    <Route path="/" exact={true} component={home}></Route>
+    <Route path="/about" component={About}/>
+  </HashRouter>;
+}
+```
 
 
