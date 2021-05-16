@@ -35,9 +35,9 @@ class home extends React.Component {
         ) : (
           <div className="movies">
             {movies.map( (movie, index) => {
-              console.log(movie);
+            //   console.log(movie);
               return <Movie key={index}
-              // id={movie.id} 
+              id={movie.id} 
               year={movie.year} 
               title={movie.title} 
               summary={movie.summary} 
